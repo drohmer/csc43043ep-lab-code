@@ -151,3 +151,5 @@ Texture mapping techniques, procedural generation, and animation.
 `08_project/`
 
 Template for the final project.
+
+_Last updated: 2026-03-02_
