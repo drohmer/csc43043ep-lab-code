@@ -21,7 +21,7 @@ void scene_structure::initialize()
 	// Configure orthographic projection for 2D-style viewing
 	// Range [-1.1, 1.1] in both x and y to frame the quad with some margin
 	camera_projection = camera_projection_orthographic{ -1.1f, 1.1f, -1.1f, 1.1f, -10, 10, window.aspect_ratio()};
-	// Optionnal: could be a perspective projection instead (to be changed in the header file: camera_projection_orthographic -> camera_projection_perspective)
+	// Optional: could be a perspective projection instead (to be changed in the header file: camera_projection_orthographic -> camera_projection_perspective)
 
 	// General information
 	display_info();

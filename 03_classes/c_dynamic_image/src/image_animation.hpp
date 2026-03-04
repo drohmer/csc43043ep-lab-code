@@ -18,7 +18,7 @@ struct image_animation_structure {
     // Fill a rectangle with a given color (defined by two opposite corner points)
     void set_rectangle(float x1, float y1, float x2, float y2, cgp::vec3 const& color);
 
-    // Fill a triangle with a given color
+    // Fill a disc with a given color
     void set_disc(float x_center, float y_center, float radius, cgp::vec3 const& color);
 
     // Fill a triangle with a given color

@@ -8,14 +8,14 @@ mesh torus_with_texture()
     float a = 1.7f;
     float b = 0.6f;
 
-    // Number of samples of the terrain is N x N
+    // Number of samples is N x N
     int N = 50;
 
-    mesh torus; // temporary terrain storage (CPU only)
+    mesh torus;
     torus.position.resize(N*N);
     torus.uv.resize(N*N);
 
-    // Fill terrain geometry
+    // Fill torus geometry
     for(int ku=0; ku<N; ++ku)
     {
         for(int kv=0; kv<N; ++kv)
@@ -64,14 +64,14 @@ mesh cylinder_with_texture()
     float r = 1.0f;
     float h = 4.0f;
 
-    // Number of samples of the terrain is N x N
+    // Number of samples is N x N
     int N = 20;
 
-    mesh cylinder; // temporary terrain storage (CPU only)
+    mesh cylinder;
     cylinder.position.resize(N*N);
     cylinder.uv.resize(N*N);
 
-    // Fill terrain geometry
+    // Fill cylinder geometry
     for(int ku=0; ku<N; ++ku)
     {
         for(int kv=0; kv<N; ++kv)

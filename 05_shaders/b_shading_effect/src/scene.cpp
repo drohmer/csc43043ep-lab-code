@@ -60,7 +60,7 @@ void scene_structure::initialize()
 	mesh sphere_mesh = mesh_primitive_sphere(1.0f);
 	sphere.initialize_data_on_gpu(sphere_mesh);
 	sphere.model.scaling = 0.2f; // coordinates are multiplied by 0.2 in the shader
-	sphere.model.translation = { 1,2,0 }; // coordinates are offseted by {1,2,0} in the shader
+	sphere.model.translation = { 1,2,0 }; // coordinates are offset by {1,2,0} in the shader
 	sphere.material.color = { 1,0.5f,0.5f }; // sphere will appear red (r,g,b components in [0,1])
 
 	
@@ -156,7 +156,7 @@ void scene_structure::display_gui()
 	ImGui::ColorEdit3("Light color", &gui.light_color[0]);
 	ImGui::SliderFloat3("Light position", &environment.light[0], -3.0f, 3.0f);
 
-	ImGui::SliderFloat("Ambiant", &gui.ambient, 0.0f, 1.0f);
+	ImGui::SliderFloat("Ambient", &gui.ambient, 0.0f, 1.0f);
 	ImGui::SliderFloat("Diffuse", &gui.diffuse, 0.0f, 1.0f);
 	ImGui::SliderFloat("Specular", &gui.specular, 0.0f, 1.0f);
 	ImGui::SliderFloat("Specular Exp.", &gui.specular_exp, 1.0f, 256.0f, "%.3f", 2);

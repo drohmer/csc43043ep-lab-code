@@ -31,7 +31,7 @@ struct scene_structure : cgp::scene_inputs_generic {
 	// Context
 	// ****************************** //
 
-	// Environment controler (background color, )
+	// Environment controller (background color, )
 	environment_structure environment; 
 	// Window where the scene is displayed
 	window_structure window; 
@@ -44,7 +44,7 @@ struct scene_structure : cgp::scene_inputs_generic {
 	void display_info();
 
 	// ****************************** //
-	// Camera controler
+	// Camera controller
 	// ****************************** //
 
 	// Controller of the camera (extrinsic parameters: position/orientation) -- to be adapted to the desired model and behavior

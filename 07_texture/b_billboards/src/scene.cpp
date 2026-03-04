@@ -90,7 +90,7 @@ void scene_structure::display_semiTransparent()
 
 	// Disable depth buffer writing
 	//  - Transparent elements cannot use depth buffer
-	//  - They are supposed to be display from furest to nearest elements
+	//  - They are supposed to be displayed from farthest to nearest elements
 	glDepthMask(false);
 
 	auto const& camera = camera_control.camera_model;
@@ -103,7 +103,7 @@ void scene_structure::display_semiTransparent()
 
 
 	// Sort transparent shapes by depth to camera
-	//   This step can be skipped, but it will be associated to visual artifacts
+	//   This step can be skipped, but it will be associated with visual artifacts
 
 	// Transform matrix (the same matrix which is applied in the vertices in the shader: T = Projection x View)
 	mat4 T = camera_projection.matrix() * camera.matrix_view();
