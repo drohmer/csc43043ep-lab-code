@@ -110,7 +110,7 @@ void scene_structure::display_frame()
 	
 
 	// Set additional uniform parameters to the shader
-	environment.uniform_generic.uniform_float["coeff_ambiant"] = gui.ambiant;
+	environment.uniform_generic.uniform_float["coeff_ambient"] = gui.ambient;
 	environment.uniform_generic.uniform_float["coeff_diffuse"] = gui.diffuse;
 	environment.uniform_generic.uniform_float["coeff_specular"] = gui.specular;
 	environment.uniform_generic.uniform_float["coeff_specular_exp"] = gui.specular_exp;
@@ -156,7 +156,7 @@ void scene_structure::display_gui()
 	ImGui::ColorEdit3("Light color", &gui.light_color[0]);
 	ImGui::SliderFloat3("Light position", &environment.light[0], -3.0f, 3.0f);
 
-	ImGui::SliderFloat("Ambiant", &gui.ambiant, 0.0f, 1.0f);
+	ImGui::SliderFloat("Ambiant", &gui.ambient, 0.0f, 1.0f);
 	ImGui::SliderFloat("Diffuse", &gui.diffuse, 0.0f, 1.0f);
 	ImGui::SliderFloat("Specular", &gui.specular, 0.0f, 1.0f);
 	ImGui::SliderFloat("Specular Exp.", &gui.specular_exp, 1.0f, 256.0f, "%.3f", 2);

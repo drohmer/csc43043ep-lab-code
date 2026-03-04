@@ -15,7 +15,7 @@ struct gui_parameters {
 	bool display_wireframe = false;
 
 	vec3 light_color = { 1,1,1 };
-	float ambiant = 0.3f;
+	float ambient = 0.3f;
 	float diffuse = 0.55f;
 	float specular = 0.6f;
 	float specular_exp = 64.0f;
@@ -36,7 +36,7 @@ struct scene_structure : cgp::scene_inputs_generic {
 	// Context
 	// ****************************** //
 
-	// Environment controler (background color, )
+	// Environment controller (background color, )
 	environment_structure environment; 
 	// Window where the scene is displayed
 	window_structure window; 
@@ -49,7 +49,7 @@ struct scene_structure : cgp::scene_inputs_generic {
 	void display_info();
 
 	// ****************************** //
-	// Camera controler
+	// Camera controller
 	// ****************************** //
 
 	// Controller of the camera (extrinsic parameters: position/orientation) -- to be adapted to the desired model and behavior

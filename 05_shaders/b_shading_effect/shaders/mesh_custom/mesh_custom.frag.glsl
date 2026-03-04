@@ -28,7 +28,7 @@ layout(location=0) out vec4 FragColor;
 // Uniform values that must be send from the C++ code
 // ***************************************************** //
 
-uniform sampler2D image_texture;   // Texture image identifiant
+uniform sampler2D image_texture;   // Texture image identifier
 
 uniform mat4 view;       // View matrix (rigid transform) of the camera - to compute the camera position
 
@@ -64,11 +64,11 @@ struct material_structure
 uniform material_structure material;
 
 
-// Ambiant uniform controled from the GUI
+// Ambient uniform controlled from the GUI
 uniform vec3 light_color;
 
 
-uniform float coeff_ambiant;
+uniform float coeff_ambient;
 uniform float coeff_diffuse;
 uniform float coeff_specular;
 uniform float coeff_specular_exp;
@@ -105,7 +105,7 @@ void main()
 	// Specular coefficient
 	float specular_component = 0.0;
 	if(diffuse_component>0.0){
-		vec3 R = reflect(-L,N); // symetric of light-direction with respect to the normal
+		vec3 R = reflect(-L,N); // symmetric of light-direction with respect to the normal
 		vec3 V = normalize(camera_position-fragment.position);
 		specular_component = pow( max(dot(R,V),0.0), (coeff_specular_exp) );
 	}
@@ -132,7 +132,7 @@ void main()
 	vec3 color_object  = fragment.color * material.color * color_image_texture.rgb;
 
 	// Compute the final shaded color using Phong model
-	vec3 color_shading = (coeff_ambiant + coeff_diffuse * diffuse_component) * color_object * light_color + coeff_specular * specular_component * light_color;	
+	vec3 color_shading = (coeff_ambient + coeff_diffuse * diffuse_component) * color_object * light_color + coeff_specular * specular_component * light_color;	
 
 
 	// TO DO: Add the fog and attenuation effect here

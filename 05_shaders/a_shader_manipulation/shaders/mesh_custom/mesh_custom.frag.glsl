@@ -28,7 +28,7 @@ layout(location=0) out vec4 FragColor;
 // Uniform values that must be send from the C++ code
 // ***************************************************** //
 
-uniform sampler2D image_texture;   // Texture image identifiant
+uniform sampler2D image_texture;   // Texture image identifier
 
 uniform mat4 view;       // View matrix (rigid transform) of the camera - to compute the camera position
 
@@ -93,7 +93,7 @@ void main()
 	// Specular coefficient
 	float specular_component = 0.0;
 	if(diffuse_component>0.0){
-		vec3 R = reflect(-L,N); // symetric of light-direction with respect to the normal
+		vec3 R = reflect(-L,N); // symmetric of light-direction with respect to the normal
 		vec3 V = normalize(camera_position-fragment.position);
 		specular_component = pow( max(dot(R,V),0.0), material.phong.specular_exponent );
 	}
