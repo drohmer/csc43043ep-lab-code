@@ -3,7 +3,7 @@
 // Fragment shader - this code is executed for every pixel/fragment that belongs to a displayed shape
 //
 // Compute the color using Phong illumination (ambient, diffuse, specular) 
-//  There is 3 possible input colors:
+//  There are 3 possible input colors:
 //    - fragment_data.color: the per-vertex color defined in the mesh
 //    - material.color: the uniform color (constant for the whole shape)
 //    - image_texture: color coming from the texture image
@@ -25,10 +25,10 @@ in struct fragment_data
 layout(location=0) out vec4 FragColor;
 
 
-// Uniform values that must be send from the C++ code
+// Uniform values that must be sent from the C++ code
 // ***************************************************** //
 
-uniform sampler2D image_texture;   // Texture image identifiant
+uniform sampler2D image_texture;   // Texture image identifier
 
 uniform mat4 view;       // View matrix (rigid transform) of the camera - to compute the camera position
 

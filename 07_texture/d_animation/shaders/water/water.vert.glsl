@@ -33,7 +33,7 @@ float snoise_abs(in vec3 v, int octaves);
 
 float deformation(float x, float z, float t) {
 
-	// TO DO: Modifiy this function to compute the height field deformation on top of the flat surface
+	// TO DO: Modify this function to compute the height field deformation on top of the flat surface
 	//  The surface is computed as (x,y,z) = (x, deformation(x,z,t), z)
 	//  ...
 
