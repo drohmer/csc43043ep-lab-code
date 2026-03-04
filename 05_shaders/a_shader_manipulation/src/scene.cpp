@@ -27,7 +27,7 @@ void scene_structure::initialize()
 	global_frame.initialize_data_on_gpu(mesh_primitive_frame());
 
 	// Remove warnings for unset uniforms
-	cgp_warning::max_warning = 0;
+	cgp_warning::max_warning = 1;
 
 
 	// Create the shapes seen in the 3D scene
