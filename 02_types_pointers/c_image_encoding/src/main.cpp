@@ -257,7 +257,7 @@ int main() {
 
     image_structure img;
 
-    // Generate a checkerboard image
+    // Generate a gradient image
     img.create_image(128, 128);
     //random_noise(img);
     gradient(img);

@@ -20,6 +20,20 @@ void image_animation_structure::set_pixel(float x, float y, cgp::vec3 const& col
 {
     set_pixel(int(x+0.5f), int(y+0.5f), color);
 }
+void image_animation_structure::set_rectangle(float x1, float y1, float x2, float y2, cgp::vec3 const& color)
+{
+    // TODO: Fill all pixels inside the rectangle defined by corners (x1,y1) and (x2,y2)
+    //  Use set_pixel to set each pixel color
+}
+void image_animation_structure::set_triangle(float x1, float y1, float x2, float y2, float x3, float y3, cgp::vec3 const& color)
+{
+    // TODO: Fill all pixels inside the triangle defined by vertices (x1,y1), (x2,y2), (x3,y3)
+}
+void image_animation_structure::set_disc(float x_center, float y_center, float radius, cgp::vec3 const& color)
+{
+    // TODO: Fill all pixels inside the disc of center (x_center,y_center) and given radius
+}
+
 void image_animation_initialization(image_animation_structure& img)
 {
     img.data.resize(32, 32);

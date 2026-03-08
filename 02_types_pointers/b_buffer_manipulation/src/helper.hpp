@@ -17,8 +17,8 @@
      and `0 <= y < Ny`.
 */
 struct image_structure {
-    int Nx; // image width/x in pixels
-    int Ny; // image height/y in pixels
+    int Nx = 0;  // image width/x in pixels
+    int Ny = 0;  // image height/y in pixels
 
     // Pixel data: row-major (x and then y), 3 floats per pixel (R, G, B), values in [0,1]
     std::vector<float> data;
