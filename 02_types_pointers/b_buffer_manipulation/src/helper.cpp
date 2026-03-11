@@ -59,13 +59,8 @@ void* read_data_file_as_buffer(const std::string &filepath, size_t &out_size)
     // Allocate buffer using new[] - returns uint8_t*, stored as void*
     uint8_t* buffer = new uint8_t[total_size];
     out_size = total_size;
-
-    // Read into temporary char buffer, then copy to our uint8_t buffer
-    char* temp_buffer = new char[total_size];
-    file.read(temp_buffer, total_size);
+    file.read(reinterpret_cast<char*>(buffer), total_size);
     file.close();
-    memcpy(buffer, temp_buffer, total_size);
-    delete[] temp_buffer;
 
     std::cout << "Loaded " << total_size << " bytes from " << filepath << std::endl;
 
