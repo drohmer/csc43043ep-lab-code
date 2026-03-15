@@ -155,9 +155,9 @@ int main() {
     extract_color_image(mystery2, /*num_bits=*/3, extracted);
     export_ppm(extracted, "07-extracted-from-mystery.ppm");
 
-    // Then: embed image-2 inside image-1 yourself
+    // Then: embed image-to-encode inside image-1 yourself
     image_structure host2 = import_ppm("assets/image-1.ppm");
-    image_structure secret = import_ppm("assets/image-2.ppm");
+    image_structure secret = import_ppm("assets/image-to-encode.ppm");
 
     embed_color_image(host2, secret, /*num_bits=*/3);
     export_ppm(host2, "08-watermarked-color.ppm");
