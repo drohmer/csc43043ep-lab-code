@@ -66,6 +66,7 @@ int main() {
     // Note: {0b00001111, 0b10000001, 0b00001010, 0b11110000, 0b10000010} = {15, 129, 10, 240, 130} in unsigned integers
     for(uint8_t byte : byte_vector) {
 
+        // Hint: std::bitset<8>(value) can be used to display bits
         // To fill ...
         // Byte with first bit 1: 10000001 -> 00000001 (1)
         // Byte with first bit 1: 11110000 -> 01110000 (112)

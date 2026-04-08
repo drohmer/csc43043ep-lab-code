@@ -152,4 +152,4 @@ Texture mapping techniques, procedural generation, and animation.
 
 Template for the final project.
 
-_Last updated: 2026-03-15_
+_Last updated: 2026-04-08_

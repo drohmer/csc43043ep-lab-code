@@ -91,6 +91,8 @@ void scene_structure::display_frame()
 	
 	// Clear image before drawing shapes
 	img.data.fill({1.0f, 1.0f, 1.0f});
+	// Add here the drawing of the shapes ...
+	// ...
 	quad.texture.update(img.data);
 	
 }

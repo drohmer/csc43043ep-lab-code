@@ -78,7 +78,7 @@ void scene_structure::initialize()
 	environment.light = { 3, 3, 3 };
 
 	// Remove warnings for unset uniforms
-	cgp_warning::max_warning = 1;
+	cgp_warning::max_warning = 0;
 
 	// Load a shader from a file
 	opengl_shader_structure shader_custom;
@@ -159,7 +159,7 @@ void scene_structure::display_gui()
 	ImGui::SliderFloat("Ambient", &gui.ambient, 0.0f, 1.0f);
 	ImGui::SliderFloat("Diffuse", &gui.diffuse, 0.0f, 1.0f);
 	ImGui::SliderFloat("Specular", &gui.specular, 0.0f, 1.0f);
-	ImGui::SliderFloat("Specular Exp.", &gui.specular_exp, 1.0f, 256.0f, "%.3f", 2);
+	ImGui::SliderFloat("Specular Exp.", &gui.specular_exp, 1.0f, 256.0f, "%.3f");
 }
 
 

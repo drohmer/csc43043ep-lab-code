@@ -5,6 +5,7 @@
 #include <cstring>
 #include <fstream>
 #include <iostream>
+#include <cstdint>
 
 
 void image_structure::create_image(int Nx_arg, int Ny_arg) {
