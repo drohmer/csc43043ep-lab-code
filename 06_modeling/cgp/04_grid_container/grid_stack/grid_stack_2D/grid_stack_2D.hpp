@@ -369,7 +369,7 @@ template <typename T, int N1, int N2> grid_stack_2D<T, N1, N2>  operator+(T cons
 
 template <typename T, int N1, int N2> grid_stack_2D<T, N1, N2>& operator-=(grid_stack_2D<T, N1, N2>& a, grid_stack_2D<T, N1, N2> const& b)
 {
-    a.data += b.data;
+    a.data -= b.data;
     return a;
 }
 template <typename T, int N1, int N2> grid_stack_2D<T, N1, N2>& operator-=(grid_stack_2D<T, N1, N2>& a, T const& b)

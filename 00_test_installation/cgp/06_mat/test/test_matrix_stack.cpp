@@ -331,5 +331,15 @@ namespace cgp_test
 		}
 
 
+
+		// norm must compute sqrt(sum of squares), not sqrt(sum)
+		{
+			// {3,4,0,...}: sqrt(9+16) = 5
+			cgp::matrix_stack<float,2,3> M = {3.0f,4.0f,0.0f, 0.0f,0.0f,0.0f};
+			assert_cgp_no_msg(cgp::is_equal(cgp::norm(M), 5.0f));
+			// {1,1,1,1}: sqrt(1+1+1+1) = 2
+			cgp::mat2 M2 = {1.0f,1.0f, 1.0f,1.0f};
+			assert_cgp_no_msg(cgp::is_equal(cgp::norm(M2), 2.0f));
+		}
 	}
 }

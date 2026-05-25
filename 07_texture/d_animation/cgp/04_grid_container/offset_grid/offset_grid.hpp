@@ -42,8 +42,8 @@ namespace cgp
 
 	template <int N1> std::pair<int, int> index_grid_from_offset_stack(int offset)
 	{
-		int const k1 = offset / N1;
-		int const k2 = offset - k1 * N1;
+		int const k2 = offset / N1;
+		int const k1 = offset - k2 * N1;
 		return { k1,k2 };
 	}
 

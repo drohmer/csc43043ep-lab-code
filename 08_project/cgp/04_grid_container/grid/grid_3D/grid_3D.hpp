@@ -365,6 +365,7 @@ template <typename T> grid_3D<T>& operator+=(grid_3D<T>& a, grid_3D<T> const& b)
 {
     assert_cgp( is_equal(a.dimension,b.dimension), "Dimension do not agree: a:"+str(a.dimension)+", b:"+str(b.dimension) );
     a.data += b.data;
+    return a;
 }
 template <typename T> grid_3D<T>& operator+=(grid_3D<T>& a, T const& b)
 {
@@ -418,7 +419,7 @@ template <typename T> grid_3D<T>  operator-(grid_3D<T> const& a, T const& b)
 }
 template <typename T> grid_3D<T>  operator-(T const& a, grid_3D<T> const& b)
 {
-    grid_3D<T> res(a.dimension);
+    grid_3D<T> res(b.dimension);
     res.data = a-b.data;
     return res;
 }

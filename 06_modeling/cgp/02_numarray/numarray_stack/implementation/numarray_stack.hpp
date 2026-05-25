@@ -461,10 +461,9 @@ namespace cgp
 
     template <typename T, int N> numarray_stack<T, N>& operator/=(numarray_stack<T, N>& a, numarray_stack<T, N> const& b)
     {
-        numarray_stack<T, N> res;
         for (int k = 0; k < N; ++k)
-            res[k] = a[k] / b[k];
-        return res;
+            a[k] /= b[k];
+        return a;
     }
     template <typename T, int N> numarray_stack<T, N>& operator/=(numarray_stack<T, N>& a, float b)
     {
